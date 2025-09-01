@@ -134,3 +134,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Env files
+.env
+
+# Local data volumes
+postgres_data
+n8n_data
+
+# Node/npm artifacts (if ever added for custom n8n nodes)
+node_modules/
+npm-debug.log
