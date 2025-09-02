@@ -25,7 +25,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Shows which containers are consuming the most CPU in real time.",
       "fieldConfig": {
@@ -105,7 +105,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "topk(5, rate(container_cpu_usage_seconds_total[1m]))",
@@ -121,7 +121,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Top containers memory usage",
       "fieldConfig": {
@@ -205,7 +205,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "topk(5, container_memory_usage_bytes)",
@@ -221,7 +221,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Disk I/O",
       "fieldConfig": {
@@ -301,7 +301,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "rate(container_fs_reads_bytes_total[1m]) + rate(container_fs_writes_bytes_total[1m])",
