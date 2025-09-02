@@ -14,6 +14,8 @@ services:
       GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
     volumes:
       - ./monitoring/grafana:/var/lib/grafana
+      - ./monitoring/provisioning:/etc/grafana/provisioning
+      - ./monitoring/dashboards:/var/lib/grafana/dashboards
     ports:
       - "127.0.0.1:3000:3000"
     restart: unless-stopped
