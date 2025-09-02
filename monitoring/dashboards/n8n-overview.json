@@ -24,7 +24,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Shows how many workflows are currently active",
       "fieldConfig": {
@@ -79,7 +79,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "n8n_active_workflow_count",
@@ -95,7 +95,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Converts process start time into “uptime” trend.\nShows how long n8n has been running",
       "fieldConfig": {
@@ -146,7 +146,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "time() - n8n_process_start_time_seconds",
@@ -162,7 +162,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Shows CPU usage over time.",
       "fieldConfig": {
@@ -249,7 +249,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "rate(n8n_process_cpu_seconds_total[5m])\r\n",
@@ -265,7 +265,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Actual memory in RAM",
       "fieldConfig": {
@@ -322,7 +322,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "n8n_process_resident_memory_bytes",
@@ -338,7 +338,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "Detects memory saturation before OOM errors.",
       "fieldConfig": {
@@ -393,7 +393,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "n8n_nodejs_heap_size_used_bytes / n8n_nodejs_heap_size_total_bytes * 100",
@@ -409,7 +409,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "prometheus_ds"
       },
       "description": "High values = workflows getting stuck, Node.js overloaded.",
       "fieldConfig": {
@@ -492,7 +492,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "fewrx5r9e79xca"
+            "uid": "prometheus_ds"
           },
           "editorMode": "code",
           "expr": "n8n_nodejs_eventloop_lag_p99_seconds",
