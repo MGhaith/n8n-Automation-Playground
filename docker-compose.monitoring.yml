@@ -32,8 +32,7 @@ services:
   postgres-exporter:
     image: quay.io/prometheuscommunity/postgres-exporter:v0.17.0
     environment:
-      # uses your existing DB credentials from .env (docker compose will substitute)
-      DATA_SOURCE_NAME: "postgresql://${DB_POSTGRESDB_USER}:${DB_POSTGRESDB_PASSWORD}@postgres:5432/${DB_POSTGRESDB_DATABASE}?sslmode=disable"
+      DATA_SOURCE_NAME: "postgresql://${POSTGRES_EXPORTER_USER}:${POSTGRES_EXPORTER_PASSWORD}@postgres:5432/${DB_POSTGRESDB_DATABASE}?sslmode=disable"
     restart: unless-stopped
 
 volumes:
