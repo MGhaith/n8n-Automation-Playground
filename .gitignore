@@ -141,6 +141,7 @@ dist
 # Local data volumes
 postgres_data
 n8n_data
+monitoring/grafana
 
 # Node/npm artifacts (if ever added for custom n8n nodes)
 node_modules/
