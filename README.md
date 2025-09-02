@@ -1,5 +1,7 @@
 # n8n Automation Playground
 
+A comprehensive n8n automation platform with integrated monitoring and observability capabilities using Grafana and Prometheus.
+
 ## Quick Start
 
 This project can be deployed in two ways:
@@ -17,9 +19,16 @@ This project can be deployed in two ways:
     2. Configure the environment variables in `.env`
     3. Start the containers:
        ```bash
-       docker compose up -d
+       docker compose -f docker-compose.yml -f docker-compose.monitoring.yml up -d --build
        ```
-    4. Access the n8n interface at [http://localhost:5678](http://localhost:5678)
+    4. Access the services:
+       - n8n interface: [http://localhost:5678](http://localhost:5678)
+       - Grafana dashboard: [http://localhost:3000](http://localhost:3000)
+
+    Monitoring Features:
+    - Pre-configured Grafana dashboards for n8n metrics (n8n Health overview and infra overview)
+    - System resource utilization tracking
+    - Automated datasource provisioning for Prometheus
 
 2. **Cloud Deployment**
     - AWS deployment guide (Coming soon)
